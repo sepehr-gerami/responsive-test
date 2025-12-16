@@ -398,10 +398,11 @@ h2 {
 }
 .container-2{
     
-    background-color: rgba(255, 246, 251, 1);
+    background-color: rgb(221, 215, 215);
     width: 377px;
     height: 845px;
-    margin-top: 8.3%;
+    margin-top: 25px;
+    
 
    h3{
         width: 344px;
