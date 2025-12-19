@@ -13,7 +13,7 @@
         <!-- start header -->
         <header>
             <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="31" viewBox="0 0 27 31" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" viewBox="0 0 27 31" fill="none">
                     <path
                         d="M6.86287 14.5523C6.86287 9.65033 10.8171 5.69608 15.7191 5.6634L16.5361 2.10131C16.2746 2.06863 16.0132 2.06863 15.7518 2.06863C8.88902 2.06863 3.30078 7.65687 3.30078 14.5196C3.30078 17.5588 4.37921 20.3366 6.20928 22.4935L8.66026 19.8137C7.54915 18.4085 6.86287 16.5784 6.86287 14.5523Z"
                         fill="url(#paint0_linear_202_79)" />
@@ -238,9 +238,11 @@
                         </linearGradient>
                     </defs>
                 </svg>
+
                 <h2>
                     cryptous
                 </h2>
+
                 <div class="logo-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="15" viewBox="0 0 25 15" fill="none">
                         <line x1="0.75" y1="0.75" x2="24.25" y2="0.75" stroke="white" stroke-width="1.5"
@@ -251,8 +253,8 @@
                             stroke-linecap="round" />
                     </svg>
                 </div>
-
             </div>
+
 
             <p class="paragraf-1">
                 <b>
@@ -266,20 +268,21 @@
                     technology.
                 </b>
             </p>
-
-            <button class="button-buy">
-                Get Whitelisted
-            </button>
-
-
-
-
         </header>
+
+        <button class="button-buy">
+            Get Whitelisted
+        </button>
+
+
+
+
+
         <!-- start main -->
 
         <main>
-            <h2>
-                Today's Cryptocurrency Prices
+            <h2 class="Todays">
+                Todays Cryptocurrency Prices
             </h2>
             <div class="paragraf-box">
                 <p class="paragraf-3">
@@ -321,17 +324,18 @@
                     <p class="paragraf-6">
                         BTC
                     </p>
-                    <div>
-                        <p class="paragraf-7">
+
+                    <div class="paragraf-7">
+                        <p>
                             $1,046,899,935,348
 
-                        <p class="paragraf-8">
+                        <p>
                             653,452BTC
                         </p>
                     </div>
-
-
                 </div>
+
+
 
             </section>
 
@@ -356,17 +360,17 @@
                                 xlink:href="data:image/png;base64,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" />
                         </defs>
                     </svg>
-                    <p class="paragraf-9">
+                    <p>
                         Ethereum
                     </p>
-                    <p class="paragraf-10">
+                    <p>
                         BTC
                     </p>
-                    <div>
-                        <p class="paragraf-11">
+                    <div class="paragraf-10">
+                        <p>
                             $1,046,899,935,348
 
-                        <p class="paragraf-12">
+                        <p>
                             653,452BTC
                         </p>
                     </div>
@@ -394,17 +398,17 @@
                                 xlink:href="data:image/png;base64,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" />
                         </defs>
                     </svg>
-                    <p class="paragraf-13">
+                    <p>
                         Cardano
                     </p>
-                    <p class="paragraf-14">
+                    <p>
                         ADA
                     </p>
-                    <div>
-                        <p class="paragraf-15">
+                    <div class="paragraf-11">
+                        <p >
                             $1,046,899,935,348
 
-                        <p class="paragraf-16">
+                        <p>
                             653,452BTC
                         </p>
                     </div>
@@ -433,17 +437,17 @@
                         </defs>
                     </svg>
 
-                    <p class="paragraf-17">
+                    <p>
                         Cardano
                     </p>
-                    <p class="paragraf-18">
+                    <p>
                         ADA
                     </p>
-                    <div>
-                        <p class="paragraf-19">
+                    <div class="paragraf-12">
+                        <p>
                             $1,046,899,935,348
 
-                        <p class="paragraf-20">
+                        <p>
                             653,452BTC
                         </p>
                     </div>
@@ -472,17 +476,17 @@
                         </defs>
                     </svg>
 
-                    <p class="paragraf-21">
+                    <p>
                         Cardano
                     </p>
-                    <p class="paragraf-22">
+                    <p>
                         ADA
                     </p>
-                    <div>
-                        <p class="paragraf-23">
+                    <div class="paragraf-13">
+                        <p>
                             $1,046,899,935,348
 
-                        <p class="paragraf-24">
+                        <p>
                             653,452BTC
                         </p>
                     </div>
@@ -511,24 +515,26 @@
                         </defs>
                     </svg>
 
-                    <p class="paragraf-25">
+                    <p>
                         Cardano
                     </p>
-                    <p class="paragraf-26">
+                    <p>
                         ADA
                     </p>
-                    <div>
-                        <p class="paragraf-27">
+                    <div class="paragraf-14">
+                        <p>
                             $1,046,899,935,348
 
-                        <p class="paragraf-28">
+                        <p>
                             653,452BTC
                         </p>
                     </div>
 
                 </div>
 
-            </section>
+            </section> 
+        </div>
+
             <div class="container-2">
                 <h3>
 
@@ -928,17 +934,17 @@
                             fill="#280074" />
                         <path d="M0 69.9177H112.224" stroke="#4D0063" stroke-miterlimit="10" />
                     </svg>
-                      <b>
+                    <b>
                         Proven Reliability
                     </b>
 
                     <p>
-                       Exchanging bitcoin since 2011
+                        Exchanging bitcoin since 2011
                     <p>
                         Industry-leading uptime
                     </p>
                     <p>
-                       24/7 dedicated support
+                        24/7 dedicated support
                     </p>
 
 
@@ -951,7 +957,7 @@
             </div>
 
         </main>
-    </div>
+   
 </body>
 
 </html>
