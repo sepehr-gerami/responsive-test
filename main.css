@@ -449,7 +449,7 @@ h3 {
 }
 
 .responsiv-3 {
-   display: flex;
+ display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
