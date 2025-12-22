@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-body {
+ body {
     width: 100%;
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -334,7 +334,6 @@ h3 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 457px;
     background-color: rgba(255, 246, 251, 1);
 }
 
@@ -351,12 +350,11 @@ h3 {
 }
 
 .responsiv {
-    display: flex;
+   display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: flex-end;
-    gap: 25px;
-    padding-left: 23px;
-    padding-bottom: 25px;
+    font-size: 13px;
 
     .logo-time,
     .logo-calendar {
@@ -364,6 +362,7 @@ h3 {
         align-items: center;
         padding-left: 5px;
         padding-top: 5%;
+        
     }
 }
 
@@ -373,7 +372,6 @@ h3 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 457px;
     background-color: rgba(255, 246, 251, 1);
 }
 
@@ -389,17 +387,16 @@ h3 {
 }
 
 .responsiv-2 {
-    display: flex;
+   display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: flex-end;
-    gap: 25px;
-    padding-left: 23px;
+    font-size: 13px;
 
     .logo-time-2,
     .logo-calendar-2 {
         display: flex;
         align-items: center;
-        padding-left: 5px;
         padding-top: 5%;
     }
 }
@@ -410,12 +407,11 @@ h3 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 430px;
     background-color: rgba(255, 246, 251, 1);
 }
 
 .box-shadow-1 {
-    width: 425px;
+    width: 90%;
     height: 385px;
     background-color: rgb(255, 255, 255);
     box-shadow: gray 1px 5px 10px;
@@ -423,7 +419,7 @@ h3 {
 }
 
 .box-shadow-2 {
-    width: 425px;
+    width: 90%;
     height: 385px;
     background-color: rgb(255, 255, 255);
     box-shadow: gray 1px 5px 10px;
@@ -432,8 +428,8 @@ h3 {
 }
 
 .box-shadow-3 {
-    width: 425px;
-    height: 390px;
+  width: 90%;
+  height: 385px;
     background-color: rgb(255, 255, 255);
     box-shadow: gray 1px 5px 10px;
     border-radius: 20px;
@@ -455,15 +451,13 @@ h3 {
 .responsiv-3 {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: flex-end;
-    gap: 30px;
-    padding-left: 23px;
-
+    font-size: 13px;
     .logo-time-3,
     .logo-calendar-3 {
         display: flex;
         align-items: center;
-        padding-left: 5px;
         padding-top: 5%;
     }
 }
@@ -531,9 +525,14 @@ h3 {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+    /* حالت پیش‌فرض برای موبایل: یک ستون */
+    grid-template-columns: 1fr;
+    gap: 20px; /* فاصله بین آیتم‌ها */
 }
+
+
+ 
+    
 
 .footer-section h4 {
     margin-bottom: 10px;
@@ -565,6 +564,14 @@ h3 {
     align-items: center;
     gap: 20px;
     font-size: 0.9rem;
+}
+.footer-bottom svg {
+    max-width: 100%;
+    height: auto; /* برای حفظ نسبت ابعاد SVG */
+}
+.main-content svg:nth-of-type(2) { /* اگر نیاز بود به SVG دوم در main-content */
+    max-width: 100%;
+    height: auto;
 }
 
 .footer-bottom p {
@@ -776,34 +783,16 @@ h3 {
         padding: 40px 10%;
     }
 
-    .footer-grid {
-        grid-template-columns: repeat(4, 1fr);
-        max-width: 1200px;
-        margin: 0 auto;
+  .footer-grid {
+        grid-template-columns: repeat(2, 1fr); /* دو ستون */
     }
+    /* موقعیت عناصر برای چیدمان دو ستونه */
+    .footer-grid > .footer-section:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; }
+    .footer-grid > .footer-section:nth-child(2) { grid-column: 1 / 2; grid-row: 2 / 3; }
+    .footer-grid > .footer-section:nth-child(3) { grid-column: 1 / 2; grid-row: 3 / 4; }
+    .footer-grid > .footer-section:nth-child(4) { grid-column: 2 / 3; grid-row: 1 / 2; }
+    .footer-grid > .footer-section:nth-child(5) { grid-column: 2 / 3; grid-row: 2 / 3; }
 
-    .footer-bottom {
-        flex-direction: row;
-        justify-content: space-between;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding-top: 30px;
-    }
-
-    /* بخش‌های content */
-    .main-content,
-    .main-content-2,
-    .main-content-3,
-    .main-content-4 {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .responsiv,
-    .responsiv-2,
-    .responsiv-3 {
-        gap: 100px;
-    }
 }
 
 /* ================ دسکتاپ بزرگ (1024px به بالا) ================ */
