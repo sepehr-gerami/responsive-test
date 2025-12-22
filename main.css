@@ -4,59 +4,100 @@
     padding: 0;
 }
 
-body {
-    width: 100vw;
-    height: 100%;
-   
-}
-
-@media all and (max-width:480px) {
     body {
-        width: 100vw;
+        width: 100%;
         height: 100%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    main{
+
+    main {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-bottom: 10px;
     }
 
     .container {
-          display: flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         background-color: rgba(27, 0, 78, 1);
-      
     }
 
-    .logo {
-        display: flex;
-        padding-top: 8vw;
-        padding-left: 3vw;
-        width: 100%;
-        height: auto;
-        gap: 1px;
+  /* استایل کلی هدر */
+.header-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 6%;
+    box-sizing: border-box;
+    background-color: rgba(27, 0, 78, 1);
+    position: relative;
+    z-index: 100;
+}
 
-        h2 {
-            color: white;
-            margin-left: 1%;
-            font-size: clamp(16px, 4vw, 28px);
-            font-size: 6vw;
+/* بخش لوگو و متن سمت چپ */
+.header-line > :first-child {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-        }
+/* استایل لوگو SVG */
+.header-line > :first-child > svg:first-child {
+    width: 35px;
+    height: 40px;
+    flex-shrink: 0;
+}
 
-        .logo-2 {
-            padding-top: 3%;
-            padding-left: 50%;
-            padding-right: 10vw;
-            width: 50vw;
-            height: auto;
-            cursor: pointer;
-        }
-    }
+/* استایل متن cryptous */
+.header-line h2 {
+    color: white;
+    font-size: clamp(20px, 5vw, 28px);
+    font-weight: bold;
+    margin: 0;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    margin-right: auto;
+}
+
+/* استایل آیکون همبرگری */
+.header-line > svg:last-child {
+    width: 25px;
+    height: 15px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+/* انیمیشن برای دکمه همبرگری */
+.header-line > svg:last-child:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+
+/* حالت فعال برای دکمه همبرگری (اختیاری - برای JavaScript) */
+.header-line > svg:last-child.active {
+    transform: rotate(180deg);
+}
+
+.header-line > svg:last-child.active line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transform-origin: center;
+}
+
+.header-line > svg:last-child.active line:nth-child(2) {
+    opacity: 0;
+}
+
+.header-line > svg:last-child.active line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+    transform-origin: center;
+}
 
     .paragraf-1 {
 
@@ -75,7 +116,6 @@ body {
         font-size: 20px;
         padding-left: 2%;
         padding-right: 3%;
-
     }
 
     .paragraf-3 {
@@ -100,7 +140,6 @@ body {
         background-color: rgba(235, 87, 87, 1);
         border: none;
         cursor: pointer;
-
     }
 
     .Todays {
@@ -113,10 +152,9 @@ body {
     .paragraf-box {
         display: flex;
         flex-direction: row-reverse;
-        gap: 50vw;
+        gap: 20px;
         color: white;
         margin-top: 30px;
-     
     }
 
     .logo-3 {
@@ -126,13 +164,11 @@ body {
         align-items: center;
         color: white;
         gap: 3px;
-
     }
 
     .paragraf-7 {
         padding-left: 27%;
         text-align: right;
-
     }
 
     .logo-4 {
@@ -142,13 +178,11 @@ body {
         align-items: center;
         color: white;
         gap: 3px;
-
     }
 
     .paragraf-10 {
         padding-left: 22%;
         text-align: right;
-
     }
 
     .logo-5 {
@@ -158,13 +192,11 @@ body {
         align-items: center;
         color: white;
         gap: 3px;
-
     }
 
     .paragraf-11 {
         padding-left: 22%;
         text-align: right;
-
     }
 
     .logo-6 {
@@ -174,13 +206,11 @@ body {
         align-items: center;
         color: white;
         gap: 3px;
-
     }
 
     .paragraf-12 {
         padding-left: 22%;
         text-align: right;
-
     }
 
     .logo-7 {
@@ -190,13 +220,11 @@ body {
         align-items: center;
         color: white;
         gap: 3px;
-
     }
 
     .paragraf-13 {
         padding-left: 22%;
         text-align: right;
-
     }
 
     .logo-8 {
@@ -206,23 +234,20 @@ body {
         align-items: center;
         color: white;
         gap: 3px;
-
     }
 
     .paragraf-14 {
         padding-left: 22%;
         text-align: right;
-
     }
 
     .container-2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color:rgba(255, 246, 251, 1);
+        background-color: rgba(255, 246, 251, 1);
         width: 100vw;
         height: auto;
-
     }
 
     h3 {
@@ -232,30 +257,502 @@ body {
         text-align: center;
         padding-bottom: 15%;
     }
-    .logo-9{
+
+    .logo-9 {
         display: flex;
         flex-direction: column;
         align-content: center;
         justify-content: center;
         align-items: center;
     }
-    .logo-10{
-         display: flex;
+
+    .logo-10 {
+        display: flex;
         flex-direction: column;
         align-content: center;
         justify-content: center;
         align-items: center;
         padding-top: 5%;
-
     }
-       .logo-11{
-         display: flex;
+
+    .logo-11 {
+        display: flex;
         flex-direction: column;
         align-content: center;
         justify-content: center;
         align-items: center;
         padding-top: 5%;
-
     }
 
+    .logo-content {
+        padding-bottom: 3%;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(27, 0, 78, 1);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .span-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        padding-top: 10%;
+        padding-bottom: 5%;
+        color: white;
+        font-size: 20px;
+    }
+
+    .paragraf-15 {
+        padding-bottom: 10%;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .main-content-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 457px;
+        background-color: rgba(255, 246, 251, 1);
+    }
+
+    .learn-paragraf {
+        font-size: 30px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .content-paragraf {
+        font-size: 16px;
+        text-align: center;
+        padding-bottom: 3px;
+    }
+
+    .responsiv {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 70px;
+        .logo-time,
+        .logo-calendar {
+            display: flex;
+            align-items: center;
+            padding-top: 5%;
+        }
+    }
+
+    .main-content-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 457px;
+        background-color: rgba(255, 246, 251, 1);
+    }
+
+    .content-paragraf-2 {
+        font-size: 16px;
+        text-align: center;
+        padding-bottom: 3px;
+    }
+
+    .logo-content-2 {
+        padding-bottom: 3%;
+    }
+
+    .responsiv-2 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 70px;
+        .logo-time-2,
+        .logo-calendar-2 {
+            display: flex;
+            align-items: center;
+            padding-top: 5%;
+        }
+    }
+
+    .main-content-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 457px;
+        background-color: rgba(255, 246, 251, 1);
+    }
+
+    .content-paragraf-3 {
+        font-size: 16px;
+        text-align: center;
+        padding-bottom: 3px;
+    }
+
+    .logo-content-3 {
+        padding-bottom: 3%;
+    }
+
+    .responsiv-3 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 70px;
+        .logo-time-3,
+        .logo-calendar-3 {
+            display: flex;
+            align-items: center;
+            padding-top: 5%;
+        }
+    }
+
+    .container-sub {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(27, 0, 78, 1);
+        height: 199px;
+        b {
+            color: white;
+            text-align: center;
+            padding-bottom: 5px;
+            font-size: 30px;
+        }
+        p {
+            color: white;
+            padding-bottom: 80px;
+        }
+    }
+
+    .sub-box {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        padding-top: 120px;
+        .input-sub {
+            position: absolute;
+            background: none;
+            border: none;
+            outline: none;
+            padding-left: 25px;
+            color: grey;
+        }
+
+        button {
+            position: absolute;
+            margin-left: 240px;
+            margin-bottom: 0.7px;
+            background-color: rgba(235, 87, 87, 1);
+            border: none;
+            border-radius: 50px;
+            width: 100px;
+            height: 40px;
+            color: white;
+            cursor: pointer;  
+        }
+        button:active {
+            background: linear-gradient(0deg, rgba(78, 0, 98, 1) 0%, rgba(34, 0, 118, 1) 100%);     
+           transform: translateY(1px) scale(0.96);
+        }
+    }
+
+.footer {
+    background: linear-gradient(0deg, rgba(78, 0, 98, 1) 0%, rgba(34, 0, 118, 1) 100%);     
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 6px;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    font-size: 20px;
+}
+
+.socials a {
+  margin-right: 10px;
+  color: #ccc;
+  text-decoration: none;
+padding-right: 20px;
+
+}
+/* ================ مدیا کوئری دسکتاپ (768px به بالا) ================ */
+@media all and (min-width: 768px) {
+    /* هدر دسکتاپ */
+    .header-line {
+        padding: 25px 2%;
+        max-width:
+         1200px;
+         height: 80px;
+        margin: 0 auto;
+        
+    }
+    
+    .header-line > :first-child {
+        gap: 15px;
+    }
+    
+    .header-line > :first-child > svg:first-child {
+        width: 40px;
+        height: 45px;
+    }
+    
+    .header-line h2 {
+        font-size: 28px;
+    }
+.nav-links {
+ margin-right: 20px;
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+  margin-right: 18px;
+
+
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+    .btn-line-header{
+        background: none;
+        border: rgba(202, 35, 35, 0.788);
+        color: white;
+        border-style: solid ;
+        border-width: 2px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        width: 120px;
+        height: 40px;
+        margin-right: 10px;
+
+    }
+    
+    .header-line > svg:last-child {
+        display: none;
+        width: 28px;
+        height: 17px;
+    }
+    
+    /* هاور همبرگری فقط در دسکتاپ */
+    .header-line > svg:last-child:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    
+    /* محتوای اصلی */
+    .paragraf-1 {
+        font-size: 42px;
+        padding-top: 10%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .paragraf-2 {
+        font-size: 20px;
+        max-width: 700px;
+        margin: 0 auto;
+        padding-top: 3%;
+    }
+    
+    /* دکمه خرید */
+    .button-buy {
+        width: 220px;
+        height: 55px;
+        font-size: 18px;
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+    
+    /* هاور و اکتیو دکمه فقط در دسکتاپ */
+    .button-buy:hover {
+        transform: translateY(5px);
+        background-color: #8E2DE2;
+        box-shadow: 0 8px 16px rgba(142, 45, 226, 0.5);
+    }
+    
+    .button-buy:active {
+        transform: translateY(8px) scale(0.95);
+        box-shadow: 0 3px 6px rgba(142, 45, 226, 0.6);
+    }
+    
+    /* بخش Todays */
+    .Todays {
+        font-size: 22px;
+        max-width: 800px;
+        margin: 40px auto 0;
+    }
+    
+    .paragraf-box {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 0;
+    }
+    
+    .logo-3, .logo-4, .logo-5, .logo-6, .logo-7, .logo-8 {
+        padding: 15px 0;
+    }
+    
+    .paragraf-7, .paragraf-10, .paragraf-11, .paragraf-12, 
+    .paragraf-13, .paragraf-14 {
+        font-size: 16px;
+    }
+    
+    /* Container 2 */
+    .container-2 {
+        padding: 40px 10%;
+    }
+    
+    h3 {
+        padding-top: 10%;
+        font-size: 28px;
+        padding-bottom: 8%;
+    }
+    
+    /* بخش Subscribe دسکتاپ */
+    .container-sub {
+        height: 250px;
+    }
+    
+    .container-sub b {
+        font-size: 36px;
+    }
+    
+    .container-sub p {
+        padding-bottom: 100px;
+        font-size: 18px;
+    }
+    
+    .sub-box {
+        padding-top: 150px;
+    }
+    
+    .sub-box .input-sub {
+        width: 400px;
+        height: 50px;
+        background: white;
+        border-radius: 50px;
+        padding-left: 30px;
+        font-size: 16px;
+    }
+    
+    .sub-box button {
+        margin-left: 320px;
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+    }
+    
+    .sub-box button:hover {
+        background: linear-gradient(0deg, rgba(78, 0, 98, 1) 0%, rgba(34, 0, 118, 1) 100%);
+    }
+    
+    .sub-box button:active {
+        transform: translateY(2px) scale(0.96);
+    }
+    
+    /* Footer دسکتاپ */
+    .footer {
+        padding: 40px 10%;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+    
+    /* بخش‌های content */
+    .main-content, .main-content-2, .main-content-3, .main-content-4 {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .responsiv, .responsiv-2, .responsiv-3 {
+        gap: 100px;
+    }
+}
+
+/* ================ دسکتاپ بزرگ (1024px به بالا) ================ */
+@media all and (min-width: 1024px) {
+    .header-line {
+        padding: 30px 10%;
+    }
+    
+    .paragraf-1 {
+        font-size: 48px;
+        padding-top: 8%;
+    }
+    
+    .container-2 {
+        padding: 60px 15%;
+    }
+    
+    .footer {
+        padding: 50px 15%;
+    }
 }
