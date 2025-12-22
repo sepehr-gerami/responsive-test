@@ -411,7 +411,7 @@ h3 {
 }
 
 .box-shadow-1 {
-    width: 90%;
+    width: 97%;
     height: 385px;
     background-color: rgb(255, 255, 255);
     box-shadow: gray 1px 5px 10px;
@@ -419,7 +419,7 @@ h3 {
 }
 
 .box-shadow-2 {
-    width: 90%;
+    width: 97%;
     height: 385px;
     background-color: rgb(255, 255, 255);
     box-shadow: gray 1px 5px 10px;
@@ -428,7 +428,7 @@ h3 {
 }
 
 .box-shadow-3 {
-  width: 90%;
+  width: 97%;
   height: 385px;
     background-color: rgb(255, 255, 255);
     box-shadow: gray 1px 5px 10px;
@@ -454,6 +454,7 @@ h3 {
     justify-content: space-around;
     align-items: flex-end;
     font-size: 13px;
+       position: absolute;
     .logo-time-3,
     .logo-calendar-3 {
         display: flex;
@@ -524,15 +525,40 @@ h3 {
 }
 
 .footer-grid {
-    display: grid;
-    /* حالت پیش‌فرض برای موبایل: یک ستون */
-    grid-template-columns: 1fr;
-    gap: 20px; /* فاصله بین آیتم‌ها */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
+/* برای سکشن اول */
+.footer-grid > *:nth-child(1) { /* یا اگر selector دقیق تری برای اولین footer-section دارید */
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
 
- 
-    
+/* برای سکشن دوم */
+.footer-grid > *:nth-child(2) { /* یا selector دقیق تر */
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+/* برای سکشن سوم */
+.footer-grid > *:nth-child(3) { /* یا selector دقیق تر */
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+/* برای سکشن چهارم */
+.footer-grid > *:nth-child(4) { /* یا selector دقیق تر */
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+/* برای سکشن پنجم */
+.footer-grid > *:nth-child(5) { /* یا selector دقیق تر */
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
 
 .footer-section h4 {
     margin-bottom: 10px;
