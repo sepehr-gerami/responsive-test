@@ -449,12 +449,12 @@ h3 {
 }
 
 .responsiv-3 {
-    display: flex;
+   display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
     font-size: 13px;
-       position: absolute;
+
     .logo-time-3,
     .logo-calendar-3 {
         display: flex;
@@ -462,6 +462,7 @@ h3 {
         padding-top: 5%;
     }
 }
+
 
 .container-sub {
     display: flex;
