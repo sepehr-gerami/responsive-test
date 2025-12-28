@@ -10,12 +10,26 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
+/* استایل‌هایی که به عنصر main اعمال شد */
 main {
-    display: flex;
+  width: 100%; /* اطمینان از گرفتن عرض کامل والد خود */
+  min-width: 0; /* اجازه کوچک شدن در موبایل */
+  max-width: 100%; /* مطمئن می‌شویم از 100% عرض فراتر نرود */
+  overflow-x: hidden; /* جلوگیری از اسکرول افقی */
+  box-sizing: border-box; /* برای مدیریت بهتر عرض با padding */
+}
+.combined-content{
+        display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding-bottom: 10px;
+    gap: 1em;
+    background-color: #e0dddd;
+     min-height: 257px;
+     width: 100%;
+     box-sizing: border-box;
+     padding-bottom:4%;
 }
 
 .container {
@@ -107,14 +121,21 @@ main {
     transform-origin: center;
 }
 
-.paragraf-1 {
+    .get-whitelisted{
+        display: flex;
+        flex-direction: column;
+}
+.logo-bt{
+    display: none;
+}
 
-    color: white;
-    padding-top: 20%;
-    padding-left: 4%;
-    padding-right: 4%;
-    text-align: center;
-    font-size: 7vw;
+.paragraf-1 {
+        display: block;
+        color: white;
+        margin: 0px auto;
+        width: fit-content;
+        text-align: center;
+        font-size: 30px;
 }
 
 .paragraf-2 {
@@ -126,13 +147,13 @@ main {
     padding-right: 3%;
 }
 
-.paragraf-3 {
-    margin-top: 1%;
+section .paragraf-name-v{
+    display: flex;
+    color: white;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
-.paragraf-4 {
-    margin-top: 0.5%;
-}
 
 
 
@@ -148,6 +169,7 @@ main {
     background-color: rgba(235, 87, 87, 1);
     border: none;
     cursor: pointer;
+    margin-left: 37%;
 }
 
 .Todays {
@@ -156,114 +178,119 @@ main {
     padding-right: 2%;
     text-align: center;
 }
-
-.paragraf-box {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 20px;
-    color: white;
-    margin-top: 30px;
+.line-one{
+    display: none;
 }
-
-.logo-3 {
+.paragraf-3{
+    width: fit-content;
+}
+.paragraf-4{
+    width: fit-content;
+}
+.market-head {
+display: none;
+}
+.market-head-mobile {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    width: 100%;
     align-items: center;
+    box-sizing: border-box;
+    justify-content: space-around;
+    gap: 50%;
     color: white;
-    gap: 3px;
+}
+    
+
+    
+
+
+
+
+/* شبکه کارت‌ها: موبایل یک ستون */
+.market-grid {
+display: none;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;           
+  grid-auto-rows: minmax(100px, 1fr);     
 }
 
-.paragraf-7 {
-    padding-left: 27%;
-    text-align: right;
+ul.market-grid{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+  overflow-x: hidden; 
+  width: 100%; 
+  min-width: 0; 
+  box-sizing: border-box; 
+  color: white;
 }
 
-.logo-4 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    color: white;
-    gap: 3px;
+li.coin-card svg {
+  max-width: 100%; 
+  width: auto; 
+  box-sizing: border-box;
 }
 
-.paragraf-10 {
-    padding-left: 22%;
-    text-align: right;
+
+li.coin-card{
+  max-width: 100%;
+  width: auto;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+.coin-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto; 
+  align-items: center;
+  gap: .75rem;
+  padding: 1rem;
+  border-radius: .75rem;
 }
 
-.logo-5 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    color: white;
-    gap: 3px;
+.coin-logo svg, .coin-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
-.paragraf-11 {
-    padding-left: 22%;
-    text-align: right;
+.coin-info {
+  display: flex;
+  gap: .5rem;
+  align-items: baseline;
 }
 
-.logo-6 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    color: white;
-    gap: 3px;
-}
+.coin-name { font-weight: 700; }
+.coin-symbol { opacity: .8; }
 
-.paragraf-12 {
-    padding-left: 22%;
-    text-align: right;
+.coin-vol {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: .25rem;
 }
+.coin-vol .usd { font-weight: 600; }
+.coin-vol .btc { opacity: .8; font-size: .9rem; }
 
-.logo-7 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    color: white;
-    gap: 3px;
-}
-
-.paragraf-13 {
-    padding-left: 22%;
-    text-align: right;
-}
-
-.logo-8 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    color: white;
-    gap: 3px;
-}
-
-.paragraf-14 {
-    padding-left: 22%;
-    text-align: right;
-}
 
 .container-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 246, 251, 1);
-    width: 100vw;
+    width: 100%;
     height: auto;
 }
 
 h3 {
     color: rgb(0, 0, 0);
-    padding-top: 20%;
+    padding-top: 5%;
     font-size: 20px;
     text-align: center;
-    padding-bottom: 15%;
+    padding-bottom: 12%;
 }
 
 .logo-9 {
@@ -290,11 +317,7 @@ h3 {
     justify-content: center;
     align-items: center;
     padding-top: 5%;
-}
-
-.logo-content {
-    padding-bottom: 3%;
-    padding-top: 2%;
+    padding-bottom: 5%;
 }
 
 .main-content {
@@ -303,8 +326,6 @@ h3 {
     align-items: center;
     justify-content: center;
     background-color: rgba(27, 0, 78, 1);
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .span-content {
@@ -316,7 +337,8 @@ h3 {
     padding-top: 10%;
     padding-bottom: 5%;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
+    text-align: center;
 }
 
 .paragraf-15 {
@@ -328,14 +350,6 @@ h3 {
     padding-right: 2%;
 }
 
-.main-content-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: rgba(255, 246, 251, 1);
-}
 
 .learn-paragraf {
     font-size: 30px;
@@ -343,18 +357,13 @@ h3 {
     padding-bottom: 5%;
 }
 
-.content-paragraf {
-    font-size: 16px;
-    text-align: center;
-    padding-bottom: 3px;
-}
 
 .responsiv {
    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    font-size: 13px;
+    font-size: .75em;
 
     .logo-time,
     .logo-calendar {
@@ -366,61 +375,39 @@ h3 {
     }
 }
 
-.main-content-3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: rgba(255, 246, 251, 1);
-}
-
-.content-paragraf-2 {
-    font-size: 16px;
-    text-align: center;
-    padding-bottom: 3px;
-}
-
-.logo-content-2 {
-    padding-bottom: 3%;
-    padding-top: 2%;
-}
 
 .responsiv-2 {
    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    font-size: 13px;
-
+    font-size:.75em;
+}
     .logo-time-2,
     .logo-calendar-2 {
         display: flex;
         align-items: center;
         padding-top: 5%;
     }
-}
 
-.main-content-4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: rgba(255, 246, 251, 1);
-}
+
+
 
 .box-shadow-1 {
-    width: 97%;
-    height: 385px;
+    text-align: center;
+    width: 85%;
+    height: 380px;
     background-color: rgb(255, 255, 255);
     box-shadow: gray 1px 5px 10px;
     border-radius: 20px;
+
+    
 }
 
 .box-shadow-2 {
-    width: 97%;
-    height: 385px;
+    text-align: center;
+    width: 85%;
+    height: 380px;
     background-color: rgb(255, 255, 255);
     box-shadow: gray 1px 5px 10px;
     border-radius: 20px;
@@ -428,23 +415,12 @@ h3 {
 }
 
 .box-shadow-3 {
-  width: 97%;
+    text-align: center;
+  width: 85%;
   height: 385px;
     background-color: rgb(255, 255, 255);
     box-shadow: gray 1px 5px 10px;
     border-radius: 20px;
-
-}
-
-.content-paragraf-3 {
-    font-size: 16px;
-    text-align: center;
-    padding-bottom: 3px;
-}
-
-.logo-content-3 {
-    padding-top: 2%;
-    padding-bottom: 3%;
 
 }
 
@@ -453,15 +429,15 @@ h3 {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    font-size: 13px;
-
+    font-size: .75em;
+}
     .logo-time-3,
     .logo-calendar-3 {
         display: flex;
         align-items: center;
         padding-top: 5%;
     }
-}
+
 
 
 .container-sub {
@@ -470,7 +446,7 @@ h3 {
     justify-content: center;
     align-items: center;
     background-color: rgba(27, 0, 78, 1);
-    height: 199px;
+    height: 250px;
 
     b {
         color: white;
@@ -498,6 +474,13 @@ h3 {
         outline: none;
         padding-left: 25px;
         color: grey;
+    }
+    .input-sub:focus{
+        background-color: transparent;
+        outline: none;
+    }
+    .input-sub:valid{
+        background-color: transparent;
     }
 
     button {
@@ -531,58 +514,88 @@ h3 {
   gap: 20px;
 }
 
-/* برای سکشن اول */
-.footer-grid > *:nth-child(1) { /* یا اگر selector دقیق تری برای اولین footer-section دارید */
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
 
-/* برای سکشن دوم */
-.footer-grid > *:nth-child(2) { /* یا selector دقیق تر */
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
 
-/* برای سکشن سوم */
-.footer-grid > *:nth-child(3) { /* یا selector دقیق تر */
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-}
-
-/* برای سکشن چهارم */
-.footer-grid > *:nth-child(4) { /* یا selector دقیق تر */
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
-
-/* برای سکشن پنجم */
-.footer-grid > *:nth-child(5) { /* یا selector دقیق تر */
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-.footer-section h4 {
+.footer-section-1 h4 {
     margin-bottom: 10px;
     font-size: 1.1rem;
 }
+.footer-section-1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.footer-section-2{
+   grid-column:2/3 ;
+    grid-row:3/2 ;
+}
+.footer-section-3{
+    grid-row: 2/3;
+}
+.footer-section-4{
+   grid-column:2/3 ;
 
-.footer-section ul {
+}
+.footer-section-5{
+   grid-column:1/3 ;
+    grid-row: 3/3;
+}
+
+
+.footer-section-1 ul {
     list-style: none;
     padding: 0;
 }
 
-.footer-section li {
-    margin-bottom: 6px;
+
+
+.footer-section-2 h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
 }
 
-.footer-section a {
-    color: #ccc;
-    text-decoration: none;
+.footer-section-2 ul {
+    list-style: none;
+    padding: 0;
 }
 
-.footer-section a:hover {
-    color: #fff;
+
+
+.footer-section-3 h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
 }
+
+.footer-section-3 ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+.footer-section-4 h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.footer-section-4 ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+
+.footer-section-5 h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.footer-section-5 ul {
+    list-style: none;
+    padding: 0;
+}
+
+
 
 .footer-bottom {
     margin-top: 30px;
@@ -604,23 +617,31 @@ h3 {
 .footer-bottom p {
     font-size: 20px;
 }
-
-.socials a {
-    margin-right: 10px;
-    color: #ccc;
-    text-decoration: none;
-    padding-right: 20px;
+.footer-grid svg{
+    width: 100%;
 
 }
 
-/* ================ مدیا کوئری دسکتاپ (768px به بالا) ================ */
-@media all and (min-width: 768px) {
+.socials a {
+    text-align: center;
+    color: #ccc;
+    text-decoration: none;
 
-    /* هدر دسکتاپ */
+}
+
+
+/* ================ دسکتاپ بزرگ (1024px به بالا) ================ */
+@media all and (min-width: 1024px) {
+ 
+    
+
+   /* هدر دسکتاپ */
     .header-line {
-        padding: 25px 2%;
-        max-width:
-            1200px;
+        justify-content: center;
+        padding-top: 25px;
+        padding-left: 5%;
+        padding-right:5%;
+        max-width: 1200px;
         height: 80px;
         margin: 0 auto;
 
@@ -637,21 +658,25 @@ h3 {
 
     .header-line h2 {
         font-size: 28px;
+        padding-bottom: 1%;
+        margin-right: auto;
     }
 
     .nav-links {
-        margin-right: 20px;
+        display:flex;
+        padding-right: 20%;
+    
     }
 
     .nav-links ul {
+        display: flex;
+        gap: 30px;
         list-style: none;
+        
     }
 
     .nav-links li {
-        display: inline-block;
-        margin-right: 18px;
-
-
+        display: flex;
     }
 
     .nav-links a {
@@ -660,6 +685,7 @@ h3 {
     }
 
     .btn-line-header {
+        display: block;
         background: none;
         border: rgba(202, 35, 35, 0.788);
         color: white;
@@ -672,6 +698,16 @@ h3 {
         margin-right: 10px;
 
     }
+       .btn-line-header:hover {
+        transform: translateY(1px);
+        background-color: #e22d2d;
+        box-shadow: 0 8px 16px rgba(142, 45, 226, 0.5);
+    }
+
+    .btn-line-header:active {
+        transform: translateY(2px) scale(0.95);
+        box-shadow: 0 3px 6px rgba(142, 45, 226, 0.6);
+    }
 
     .header-line>svg:last-child {
         display: none;
@@ -679,34 +715,61 @@ h3 {
         height: 17px;
     }
 
-    /* هاور همبرگری فقط در دسکتاپ */
-    .header-line>svg:last-child:hover {
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
-
     /* محتوای اصلی */
-    .paragraf-1 {
-        font-size: 42px;
-        padding-top: 10%;
-        max-width: 800px;
-        margin: 0 auto;
-    }
 
-    .paragraf-2 {
-        font-size: 20px;
-        max-width: 700px;
-        margin: 0 auto;
-        padding-top: 3%;
+    .get-whitelisted{
+        display: flex;
+        align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+        width: 100%;
+        height: max-content; 
+}
+.header-m{
+    flex: 1;
+    width: auto;
+    padding-left: 10%;
+}
+    .paragraf-1 {
+    
+       display: flex;
+        text-align: left;
+        width: 600px;
+        padding-top: 5%;
+        padding-right: 0%;
+        font-size: 35px;
+        height: fit-content;
+
     }
+    .paragraf-2{
+    padding-top: 0;
+    text-align: left;
+    width: 500px;
+    padding-top: 1%;
+     padding-left: 5%;
+    font-size: 12px;
+    height: fit-content;
+    }
+    .logo-bt{
+     display: block;
+    flex: 1; /* عرض مساوی با header-m */
+    max-width: none; /* حذف محدودیت max-width قبلی */
+    width: auto;
+    }
+    .logo-bt svg {
+    width: 100%;
+    height: auto;
+  }
+    
+    
 
     /* دکمه خرید */
     .button-buy {
-        width: 220px;
+        margin-top: 4%;
         height: 55px;
         font-size: 18px;
-        margin-top: 5%;
-        margin-bottom: 3%;
+        margin-left: 5%;
+       
     }
 
     /* هاور و اکتیو دکمه فقط در دسکتاپ */
@@ -726,118 +789,225 @@ h3 {
         font-size: 22px;
         max-width: 800px;
         margin: 40px auto 0;
+        padding-bottom: 5%;
     }
 
-    .paragraf-box {
-        max-width: 800px;
-        margin: 30px auto;
-        padding: 0;
-    }
+ .line-one{
+    display: block;
+    margin: auto;
+    padding-left: 1.25%;
+    padding-right: 1.25%;
+}
 
-    .logo-3,
-    .logo-4,
-    .logo-5,
-    .logo-6,
-    .logo-7,
-    .logo-8 {
-        padding: 15px 0;
-    }
+.market-grid{
+  padding: 14px 16px;
+  border-radius: 10px;
+}
 
-    .paragraf-7,
-    .paragraf-10,
-    .paragraf-11,
-    .paragraf-12,
-    .paragraf-13,
-    .paragraf-14 {
-        font-size: 16px;
-    }
 
-    /* Container 2 */
+
+.market-head {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-around;
+    gap: 2%;
+    color: white;
+} 
+
+
+li.coin-card svg {
+  max-width: 100%; 
+  width: auto; 
+  box-sizing: border-box;
+}
+
+
+li.coin-card{
+  max-width: 100%;
+  width: auto;
+  overflow: hidden; 
+  box-sizing: border-box;
+}
+.coin-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto; 
+  align-items: center;
+  gap: .75rem;
+  padding: 1rem;
+  border-radius: .75rem;
+}
+
+.coin-logo svg, .coin-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.coin-info {
+  display: flex;
+  gap: .5rem;
+  align-items: baseline;
+}
+
+.coin-name { font-weight: 700; }
+.coin-symbol { opacity: .8; }
+
+.coin-vol {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: .25rem;
+}
+.coin-vol .usd { font-weight: 600; }
+.coin-vol .btc { opacity: .8; font-size: .9rem; }
+
+
+.market-head-mobile{
+    display: none;
+}
+/* container 2 */
     .container-2 {
-        padding: 40px 10%;
+        display:grid;
+        grid-template-columns:  repeat(3,1fr);
+        grid-template-rows: 70px 250px;
+       
+ 
     }
 
     h3 {
-        padding-top: 10%;
-        font-size: 28px;
-        padding-bottom: 8%;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    grid-column: 2/3;
+    padding-top: 10%;
+       
     }
-
-    /* بخش Subscribe دسکتاپ */
-    .container-sub {
-        height: 250px;
+    .logo-9,.logo-10,.logo-11{
+          display: flex;
+    flex-direction: column;
+    padding-top: 0%;
+    grid-row: 2/3;
     }
-
-    .container-sub b {
-        font-size: 36px;
+    .combined-content{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 70px 386px ;
+        padding: 4,4,4%;
     }
-
-    .container-sub p {
-        padding-bottom: 100px;
-        font-size: 18px;
+    .learn-paragraf{
+        grid-column: 2/3;
+        width: fit-content;
     }
-
-    .sub-box {
-        padding-top: 150px;
-    }
-
-    .sub-box .input-sub {
-        width: 400px;
-        height: 50px;
-        background: white;
-        border-radius: 50px;
-        padding-left: 30px;
-        font-size: 16px;
-    }
-
-    .sub-box button {
-        margin-left: 320px;
-        width: 120px;
-        height: 45px;
-        font-size: 16px;
-    }
-
-    .sub-box button:hover {
-        background: linear-gradient(0deg, rgba(78, 0, 98, 1) 0%, rgba(34, 0, 118, 1) 100%);
-    }
-
-    .sub-box button:active {
-        transform: translateY(2px) scale(0.96);
-    }
-
-    /* Footer دسکتاپ */
-    .footer {
-        padding: 40px 10%;
+    .box-shadow-1,.box-shadow-2,.box-shadow-3{
+        grid-row: 2/3;
     }
 
   .footer-grid {
-        grid-template-columns: repeat(2, 1fr); /* دو ستون */
-    }
-    /* موقعیت عناصر برای چیدمان دو ستونه */
-    .footer-grid > .footer-section:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; }
-    .footer-grid > .footer-section:nth-child(2) { grid-column: 1 / 2; grid-row: 2 / 3; }
-    .footer-grid > .footer-section:nth-child(3) { grid-column: 1 / 2; grid-row: 3 / 4; }
-    .footer-grid > .footer-section:nth-child(4) { grid-column: 2 / 3; grid-row: 1 / 2; }
-    .footer-grid > .footer-section:nth-child(5) { grid-column: 2 / 3; grid-row: 2 / 3; }
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* پنج ستون مساوی */
+    grid-template-rows: 1fr;               /* فقط یک ردیف */
+    gap: 10px;
+  }
+
+  .footer-section-1 { grid-column: 1/2; grid-row: 1/2; }
+  .footer-section-2 { grid-column: 2/3; grid-row: 1/2; }
+  .footer-section-3 { grid-column: 3/4; grid-row: 1/2; }
+  .footer-section-4 { grid-column: 4/5; grid-row: 1/2; }
+  .footer-section-5 { grid-column: 5/6; grid-row: 1/2; }
+
+
+
+
+.footer-bottom {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+.footer-bottom svg {
+    max-width: 100%;
+    height: auto; /* برای حفظ نسبت ابعاد SVG */
+}
+
+.footer-bottom p {
+    font-size: 20px;
+}
+.footer-grid svg{
+    width: 100%;
 
 }
 
-/* ================ دسکتاپ بزرگ (1024px به بالا) ================ */
-@media all and (min-width: 1024px) {
-    .header-line {
-        padding: 30px 10%;
+.socials a {
+    text-align: center;
+    color: #ccc;
+    text-decoration: none;
+
+}
+
+
+.main-content{
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 20px;
+justify-items: center;
+}
+.paragraf-15 {
+    padding-bottom:0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 35px;
+    font-weight:200px;
+     grid-row:1/2 ;
+    grid-column: 1/2;
+}
+
+.span-content{
+    grid-row:1/2 ;
+    grid-column: 1/2;
+    padding-top: 0;
+    padding-bottom: 380px;
+    font-size: 3em;
+    font-weight: 700px;
+}
+.svg-1{
+    grid-row:1/2 ;
+    grid-column:2/3 ;
+}
+.svg-2{
+    padding-top:400px;
+    width: 450px;
+    grid-row:1/2 ;
+    grid-column:1/2 ;
+}
+
+
+
+.container-sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(27, 0, 78, 1);
+    height: 300px;
+
+    b {
+        color: white;
+        text-align: center;
+        padding-bottom: 5px;
+        font-size: 30px;
     }
 
-    .paragraf-1 {
-        font-size: 48px;
-        padding-top: 8%;
+    p {
+        color: white;
+        padding-bottom: 80px;
     }
-
-    .container-2 {
-        padding: 60px 15%;
-    }
-
-    .footer {
-        padding: 50px 15%;
-    }
+}
 }
