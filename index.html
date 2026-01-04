@@ -1667,21 +1667,27 @@
                 sidebar.classList.remove("open");
             });
         });
-        let lastScrollTop = 0;
-const header = document.getElementById("header-line");
+        // انتخاب هدر
+const header = document.querySelector(".header-line");
+let lastScrollTop = 0;
 
+// گوش دادن به رویداد اسکرول
 window.addEventListener("scroll", function() {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  // شرط: فقط روی موبایل (عرض کمتر از 768px)
+  if (window.innerWidth < 1024) {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (scrollTop > lastScrollTop) {
-    // اسکرول به پایین → هدر مخفی بشه
-    header.classList.add("hide");
-  } else {
-    // اسکرول به بالا → هدر ظاهر بشه
-    header.classList.remove("hide");
+    if (scrollTop > lastScrollTop) {
+      // اسکرول به پایین → هدر مخفی بشه
+      header.classList.add("hide");
+    } else {
+      // اسکرول به بالا → هدر ظاهر بشه
+      header.classList.remove("hide");
+    }
+
+    // جلوگیری از منفی شدن مقدار
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   }
-
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // جلوگیری از منفی شدن
 }, false);
 
     </script>
