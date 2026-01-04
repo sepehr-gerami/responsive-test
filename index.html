@@ -256,14 +256,32 @@
             <button class="btn-line-header">
                 Trade Now
             </button>
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="15" viewBox="0 0 25 15" fill="none">
-                <line x1="0.75" y1="0.75" x2="24.25" y2="0.75" stroke="white" stroke-width="1.5"
-                    stroke-linecap="round" />
-                <line x1="0.75" y1="7.06943" x2="24.25" y2="7.06943" stroke="white" stroke-width="1.5"
-                    stroke-linecap="round" />
-                <line x1="0.75" y1="13.3889" x2="24.25" y2="13.3889" stroke="white" stroke-width="1.5"
-                    stroke-linecap="round" />
-            </svg>
+                 <button class="hamburger" id="hamburgerBtn">
+            ☰
+        </button>
+
+        <aside id="sidebar">
+            <ul id="sdb">
+                <li> <a href="#" >Home</a></li>
+
+                <li> <a href="#" >Company</a></li>
+
+                <li><a href="#" >pricing</a></li>
+
+                <li><a href="#">time</a></li>
+
+                <li><a href="#WebDev">contact</a></li>
+
+                 <li><a href="#">blog</a></li>
+
+                <li id="spn"> <span>Communication</span></li>
+                
+                <li><a href="https://sepehr-gerami.github.io/responsive-test/"  target="_blank">project</a></li>
+
+                <li><a href="https://github.com/sepehr-gerami"  target="_blank">GitHub</a></li>
+            </ul>
+
+        </aside>
 
         </header>
         <!-- start main -->
@@ -1539,12 +1557,15 @@
         <div class="footer-grid">
             <div class="footer-section-1">
                 <h4>Company</h4>
-                <ul>
+                
+                          <ul>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Terms of use</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Disclaimer</a></li>
-                </ul>
+                </ul> 
+                
+         
             </div>
 
             <div class="footer-section-2">
@@ -1631,6 +1652,25 @@
             <p>Copyright 2021, Cryptous</p>
         </div>
     </footer>
+        <script>
+        const btn = document.getElementById("hamburgerBtn");
+        const sidebar = document.getElementById("sidebar");
+
+        btn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+        });
+        document.addEventListener("click", (e) => {
+            if (!sidebar.contains(e.target) && !btn.contains(e.target)) {
+                sidebar.classList.remove("open");
+            }
+        });
+        document.querySelectorAll("aside a").forEach(link => {
+            link.addEventListener("click", () => {
+                sidebar.classList.remove("open");
+            });
+        });
+
+    </script>
 </body>
 
 </html>
