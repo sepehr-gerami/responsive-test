@@ -141,6 +141,7 @@ main {
         width: fit-content;
         text-align: center;
         font-size: 30px;
+        padding-top: 55px;
 }
 
 .paragraf-2 {
@@ -166,7 +167,7 @@ aside {
   right: -250px;
   width: 250px;
   height: calc(100vh - 50px);
- background: linear-gradient(90deg, rgba(2, 0, 36, 0.806) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+ background: linear-gradient(90deg, rgba(10, 10, 115, 0.645) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
  border-left: white 1px solid;
   padding-top: 20px;
   transition: 0.4s ease;
