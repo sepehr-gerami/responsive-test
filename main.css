@@ -55,7 +55,7 @@ main {
   top: 0;
   left: 0;
   z-index: 1000;
-  transition: transform 0.3s ease;
+  transition: transform 0.1s ease;
 }
 
 .header-line.hide {
@@ -94,7 +94,6 @@ main {
     margin-right: auto;
 }
 
-/* استایل آیکون همبرگری */
 .header-line>svg:last-child {
     width: 25px;
     height: 15px;
@@ -103,14 +102,12 @@ main {
     transition: all 0.3s ease;
 }
 
-/* انیمیشن برای دکمه همبرگری */
 .header-line>svg:last-child:hover {
     transform: scale(1.1);
     opacity: 0.8;
 }
 
 
-/* حالت فعال برای دکمه همبرگری (اختیاری - برای JavaScript) */
 .header-line>svg:last-child.active {
     transform: rotate(180deg);
 }
@@ -165,15 +162,24 @@ section .paragraf-name-v{
 
 aside {
   position: fixed;
-  top: 0;
+  top: 50px;
   right: -250px;
   width: 250px;
-  height: 100vh;
- background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  height: calc(100vh - 50px);
+ background: linear-gradient(90deg, rgba(2, 0, 36, 0.806) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
  border-left: white 1px solid;
-  padding-top: 60px;
-  transition: 0.8s ease;
+  padding-top: 20px;
+  transition: 0.4s ease;
   border-top-left-radius: 10px;
+  z-index: 999;
+
+}
+aside.no-header{
+    top: 0;
+    height: 100vh;
+}
+aside.active{
+    right: 0;
 }
 
 aside a {
@@ -516,6 +522,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+ 
     background-color: rgba(27, 0, 78, 1);
     height: 250px;
 
